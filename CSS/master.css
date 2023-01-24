@@ -1,0 +1,64 @@
+
+
+* {
+  font-family: 'Mukta', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  --blue-color: #0288d1;
+  --green-color: #009688;
+  --yellow-color: #c0ca33;
+  --soft-blue-color: #00acc1;
+  
+  --main-transition : .25s
+}
+
+html {
+  
+}
+
+body {
+  
+}
+
+.login-page {
+  height: 100vh;
+}
+.login-container {
+
+}
+.login-container h1 {
+  font-weight: bold;
+  margin-bottom: .5rem;
+  
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+.login-form {
+  border: 1px solid rgb(0, 0, 0, .2);
+}
+.login-form h2 {
+  background-color: #eee;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.404);
+  padding: 1rem;
+  border-bottom: 1px solid rgb(0, 0, 0, .2);
+}
+.login-form div {
+  gap: .5rem;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+}
+.login-form div input {
+  outline: none;
+  padding: .25rem .5rem;
+  border-color: rgb(0, 0, 0, .2);
+  border-radius: .25rem;
+  transition: var(--main-transition, .25s);
+}
+.login-form div input:focus {
+  background-color: rgb(2, 136, 209, .2);
+  border-color: rgb(2, 136, 209, .2);
+}
+.login-form .btn.submit-login {
+  margin: .5rem auto;
+}
