@@ -4,6 +4,13 @@
   --yellow-color: #c0ca33;
   --soft-blue-color: #00acc1;
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
 
 .fx {
   display: flex;

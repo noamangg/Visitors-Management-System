@@ -1,64 +1,156 @@
-
-
 * {
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   box-sizing: border-box;
   margin: 0;
   --blue-color: #0288d1;
   --green-color: #009688;
-  --yellow-color: #c0ca33;
+  --yellow-color: #e48d29;
   --soft-blue-color: #00acc1;
-  
-  --main-transition : .25s
+  --dark-blue-color: #172b50;
+  --white-color: #eeeeee;
+  --main-transition: 0.25s;
 }
 
 html {
-  
 }
 
 body {
-  
+  height: 100vh;
+}
+main {
+  height: 100%;
 }
 
 .login-page {
   height: 100vh;
 }
 .login-container {
-
 }
 .login-container h1 {
   font-weight: bold;
-  margin-bottom: .5rem;
-  
+  margin-bottom: 0.5rem;
+
   font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .login-form {
-  border: 1px solid rgb(0, 0, 0, .2);
+  border: 1px solid rgb(0, 0, 0, 0.2);
 }
 .login-form h2 {
   background-color: #eee;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.404);
   padding: 1rem;
-  border-bottom: 1px solid rgb(0, 0, 0, .2);
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
 }
 .login-form div {
-  gap: .5rem;
-  margin: .5rem 0;
-  padding: .5rem 1rem;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
 }
 .login-form div input {
   outline: none;
-  padding: .25rem .5rem;
-  border-color: rgb(0, 0, 0, .2);
-  border-radius: .25rem;
-  transition: var(--main-transition, .25s);
+  padding: 0.25rem 0.5rem;
+  border-color: rgb(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  transition: var(--main-transition, 0.25s);
 }
 .login-form div input:focus {
-  background-color: rgb(2, 136, 209, .2);
-  border-color: rgb(2, 136, 209, .2);
+  background-color: rgb(2, 136, 209, 0.2);
+  border-color: rgb(2, 136, 209, 0.2);
 }
 .login-form .btn.submit-login {
-  margin: .5rem auto;
+  margin: 0.5rem auto;
+}
+
+/* Page Dashboard*/
+.main-content {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+}
+
+aside {
+  background-color: var(--dark-blue-color, #172b50);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.aside-image {
+  width: 100%;
+  padding: 0.75rem 0;
+}
+.aside-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+aside .hero li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white-color, #f8f8f8);
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--white-color, #f8f8f8);
+}
+
+aside .hero li a:is(.active, :hover) {
+  color: var(--dark-blue-color, #172b50);
+  background-color: var(--white-color, #f8f8f8);
+}
+@media (max-width: 767px){
+  .main-content {
+    grid-template-columns: auto 1fr;
+  }
+  aside .hero li a p {
+    display: none;
+  }
+  aside .hero li a{
+    justify-content: center;
+  }
+  
+}
+
+.aside-bro > h1 {
+  padding: 0.75rem 1rem;
+  background-color: var(--dark-blue-color, #172b50);
+  margin: 0;
+  width: 100%;
+  color: var(--white-color, #f8f8f8);
+  height: 84px;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+.statics .statics-boxs {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem 2rem;
+  color: var(--white-color, #f8f8f8);
+}
+.statics-boxs > div {
+  text-align: center;
+  background-color: var(--green-color, #009688);
+  border-radius: .25rem;
+}
+.statics-boxs > div h3 {
+  padding: 1rem;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+
+}
+.statics-boxs > div p {
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.statics-boxs > div:nth-child(2) {
+  --green-color : var(--blue-color, #009688)
+}
+.statics-boxs > div:nth-child(3) {
+  --green-color : var(--yellow-color, #009688)
+}
+.statics-boxs > div:last-child {
+  --green-color : var(--soft-blue-color, #009688)
 }
